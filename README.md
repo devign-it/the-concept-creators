@@ -11,6 +11,13 @@ Creating a digital and visual diary for The Concept Creators, a creative studio 
 
 - [X] HTML5 Canvas with [Konva.js](https://konvajs.org/docs)
 
+## Inspiration
+
+Can't build anything without any inspiration, we based our idea on the following two awesome websites:
+
+- [Whirlwind](http://www.whirlwindwhirlwind.com/tokyo)
+- [Thatschic](http://thatschic.net/)
+
 ---
 
 Based on [Gatsby Universal](https://github.com/fabe/gatsby-universal)
