@@ -9,6 +9,7 @@ Creating a digital and visual diary for The Concept Creators, a creative studio 
 
 ---
 
+Based on (Gatsby Universal)[https://github.com/fabe/gatsby-universal]
 
 ## Features
 
