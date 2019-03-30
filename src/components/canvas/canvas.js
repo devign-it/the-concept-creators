@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import Konva from 'konva';
 import { render } from 'react-dom';
-import { Stage, Layer, Star, Text, Image } from 'react-konva';
+import { Stage, Layer, Circle, Text, Rect, Image } from 'react-konva';
 import useImage from 'use-image';
 
 // the first very simple and recommended way:
-const LionImage = (props) => {
-  const [image] = useImage('https://konvajs.org/assets/lion.png');
+const StaticImage = ({ props }) => {
+  // const [image] = useImage('../../../content/images/gallery/placeholder.png');
+  const [image] = useImage('../../images/icon.png');
+
   return (
     <Image
       x={Math.random() * window.innerWidth}
@@ -27,9 +29,10 @@ export default class Canvas extends Component {
   };
 
   handleDragStart = e => {
-    this.setState({
-      isDragging: true,
-    });
+    // console.log('dragStart state',this.state.isDragging)
+    // this.setState({
+    //   isDragging: true,
+    // });
     e.target.setAttrs({
       shadowOffset: {
         x: 15,
@@ -40,11 +43,13 @@ export default class Canvas extends Component {
     });
   };
   handleDragEnd = e => {
-    this.setState({
-      isDragging: false,
-    });
+    // console.log('dragEnd state',this.state.isDragging)
+
+    // this.setState({
+    //   // isDragging: false,
+    // });
     e.target.to({
-      duration: 0.5,
+      duration: 2000,
       easing: Konva.Easings.ElasticEaseOut,
       scaleX: 1,
       scaleY: 1,
@@ -59,24 +64,24 @@ export default class Canvas extends Component {
       <Stage width={window.innerWidth} height={window.innerHeight}>
         <Layer>
           {numbers.map(number => (
-            // <Star
-            //   key={number.toString()}
-            //   x={Math.random() * window.innerWidth}
-            //   y={Math.random() * window.innerHeight}
-            //   numPoints={3}
-            //   innerRadius={20}
-            //   outerRadius={40}
-            //   fill={this.state.isDragging ? '#0000ed' : 'black'}
-            //   opacity={0.8}
-            //   draggable
-            //   rotation={Math.random() * 180}
-            //   shadowColor="rgba(0, 0, 0, 0.2)"
-            //   shadowBlur={20}
-            //   shadowOpacity={0.6}
-            //   onDragStart={this.handleDragStart}
-            //   onDragEnd={this.handleDragEnd}
-            // />
-            <LionImage key={number.toString()} />
+            <>
+              {/* <Circle
+                key={number.toString()}
+                x={Math.random() * window.innerWidth}
+                y={Math.random() * window.innerHeight}
+                radius={50}
+                fill={this.state.isDragging ? '#0000ed' : 'black'}
+                opacity={0.8}
+                draggable
+                rotation={Math.random() * 10}
+                shadowColor="rgba(0, 0, 0, 0.2)"
+                shadowBlur={20}
+                shadowOpacity={0.6}
+                onDragStart={this.handleDragStart}
+                onDragEnd={this.handleDragEnd}
+              /> */}
+              <StaticImage key={number.toString()} />
+            </>
           ))}
         </Layer>
       </Stage>
