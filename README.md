@@ -7,9 +7,20 @@ Creating a digital and visual diary for The Concept Creators, a creative studio 
 * A generative grid with images, gifs and videos of projects and current moods. 
 * Integration with CMS for maintainibility
 
+### Features
+
+- [X] HTML5 Canvas with [Konva.js](https://konvajs.org/docs)
+
+## Inspiration
+
+Can't build anything without any inspiration, we based our idea on the following two awesome websites:
+
+- [Whirlwind](http://www.whirlwindwhirlwind.com/tokyo)
+- [Thatschic](http://thatschic.net/)
+
 ---
 
-Based on (Gatsby Universal)[https://github.com/fabe/gatsby-universal]
+Based on [Gatsby Universal](https://github.com/fabe/gatsby-universal)
 
 ## Features
 
@@ -46,10 +57,10 @@ Do you have suggestions or feedback? [Open an issue](https://github.com/fabe/gat
 
 ```bash
 # Installation with `gatsby-cli`
-gatsby new my-site https://github.com/fabe/gatsby-universal
+gatsby new my-site https://github.com/devign-it/the-concept-creators
 
 # Installation with `git clone`
-git clone my-site git@github.com:fabe/gatsby-universal.git
+git clone my-site https://github.com/devign-it/the-concept-creators
 cd my-site
 yarn install
 
@@ -69,28 +80,6 @@ yarn format
 yarn build:favicons
 ```
 
-## Configuration
-
-Find the site-wide configuration in `site-config.js`.
-
-```js
-module.exports = {
-  siteTitle: `Gatsby Universal`,
-  siteTitleShort: `GatsbyU`,
-  siteDescription: `An opinionated starter for Gatsby.`,
-  siteUrl: `https://gu.fabianschultz.com`,
-  themeColor: `#000`,
-  backgroundColor: `#fff`,
-  pathPrefix: null,
-  logo: path.resolve(__dirname, 'src/images/icon.png'),
-  social: {
-    twitter: `gatsbyjs`,
-    fbAppId: `966242223397117`,
-  },
-};
-```
-
-> 🚨 Don't forget to update your `robots.txt` inside `static/`!
 
 ## Folder structure
 ```bash
@@ -124,5 +113,6 @@ module.exports = {
 
 ## Author
 
-* Fabian Schultz ([@fschultz_](https://twitter.com/fschultz_)) - [Stink Studios](https://stinkstudios.com)
+Original author of the [Gatsby Universal](https://github.com/fabe/gatsby-universal)
 
+* Fabian Schultz ([@fschultz_](https://twitter.com/fschultz_)) - [Stink Studios](https://stinkstudios.com)
