@@ -5,17 +5,22 @@ import { Stage, Layer, Circle, Text, Rect, Image } from 'react-konva';
 import useImage from 'use-image';
 
 // the first very simple and recommended way:
-const StaticImage = ({ props }) => {
-  // const [image] = useImage('../../../content/images/gallery/placeholder.png');
-  const [image] = useImage('../../images/icon.png');
+const StaticImage = props => {
+  const [image] = useImage(
+    'https://s3.amazonaws.com/peoplepng/wp-content/uploads/2018/02/14090819/3D-Gold-Star-PNG-File.png'
+  );
+  // const [image] = useImage('../../images/icon.png');
 
   return (
     <Image
       x={Math.random() * window.innerWidth}
       y={Math.random() * window.innerHeight}
+      // width={Math.random() * window.innerHeight / 2}
+      // height={Math.random() * window.innerHeight / 2}
+      style={{width: window.innerWidth / 2,}}
       draggable
       image={image}
-      rotation={Math.random() * 180}
+      rotation={Math.random() * 180 }
       shadowColor="rgba(0, 0, 0, 0.2)"
       shadowBlur={20}
       shadowOpacity={0.6}
