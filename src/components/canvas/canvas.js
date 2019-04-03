@@ -85,6 +85,7 @@ export default class Canvas extends Component {
                 onDragStart={this.handleDragStart}
                 onDragEnd={this.handleDragEnd}
               /> */}
+              {console.log('test', 'test')}
               <StaticImage key={number.toString()} />
             </>
           ))}
